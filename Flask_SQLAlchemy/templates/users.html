@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<body>
+  <head>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title>Users</title>
+  </head>
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in users %}
+      <tr>
+        <td> {{item.username}} </td>
+        <td> {{item.email}} </td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</body>
+</html>

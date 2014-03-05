@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<style type="text/css">
+#pipe ul {
+ margin-left: 0;
+ padding-left: 0;
+ display: inline;
+ } 
+
+ #pipe ul li {
+ margin-left: 0;
+ padding: 3px 15px;
+ border-left: 1px solid #000;
+ border-right: 1px solid #000;
+ list-style: none;
+ display: inline;
+ }
+  </style>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="pipe">
+      <ul> 
+      {% for item in links %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %} 
+      </ul> 
+    </div>
+    <div >
+      <h1>Peemin's Web Page</h1>
+      <h3>Welcome to my page!</h3>
+  </div>
+</body>
